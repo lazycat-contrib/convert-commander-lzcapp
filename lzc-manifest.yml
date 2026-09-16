@@ -1,0 +1,15 @@
+application:
+  subdomain: convert-commander
+  background_task: true
+  public_path:
+    - /
+  upstreams:
+    - location: /
+      backend: http://convert-commander:5000
+services:
+  convert-commander:
+    # upstream: benzauber/convert-commander:v1.3.0
+    image: benzauber/convert-commander:v1.3.0
+    binds:
+      - /lzcapp/var/uploads:/app/uploads
+      - /lzcapp/var/convert:/app/convert
