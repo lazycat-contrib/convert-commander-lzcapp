@@ -9,7 +9,7 @@ application:
 services:
   convert-commander:
     # upstream: benzauber/convert-commander:v1.3.0
-    image: benzauber/convert-commander:v1.3.0
+    image: registry.lazycat.cloud/czyt/benzauber/convert-commander:0f54c43bdf589d52
     binds:
       - /lzcapp/var/uploads:/app/uploads
       - /lzcapp/var/convert:/app/convert
